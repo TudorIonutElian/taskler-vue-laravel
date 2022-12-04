@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('name', 50);
             $table->unsignedBigInteger('created_by');
             $table->unsignedBigInteger('updated_by')->nullable();
+            $table->tinyInteger('is_active')->default(1);
             $table->timestamps();
 
             $table->foreign('created_by')
