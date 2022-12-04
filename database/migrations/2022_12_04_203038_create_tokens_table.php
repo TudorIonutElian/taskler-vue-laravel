@@ -23,6 +23,7 @@ return new class extends Migration
             $table->tinyInteger('can_read')->default(1);
             $table->tinyInteger('can_update')->default(0);
             $table->tinyInteger('can_delete')->default(0);
+            $table->tinyInteger('is_active')->default(1);
 
             $table->foreign('user_id')
                     ->references('id')
